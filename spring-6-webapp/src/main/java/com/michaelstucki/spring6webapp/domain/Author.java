@@ -5,9 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Tell JPA provider (e.g., Hibernate) that this class represents
+ * a persistent entity whose instances can be stored/retrieved from
+ * a relational database
+ */
 @Entity
 public class Author {
 
+    // Tell JPA that id is the primary key in the database that the DBMS will
+    // auto-increment
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
